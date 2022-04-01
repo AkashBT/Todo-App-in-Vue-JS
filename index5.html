@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Vue Tutorial Number 5</title>
+</head>
+<body>
+     <h3>Title: Working with Radio Button and Select in Vue</h3>
+     <h3>Description : We wil learn how to bind a form having radio button and select component using Vue</h3>
+
+     <form action="" id="myform">
+
+        <input type="radio" id="male" value="male" v-model="gender">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" value="female" v-model="gender">
+        <label for="female">Female</label>
+
+        <h1>{{gender}}</h1>
+     </form>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <script>
+        const vueComponent = new Vue({
+            el:"#myform",
+            data:{
+                gender:null
+            },
+            method:{
+
+            }
+        })
+        console.log(vueComponent)
+    </script>
+
+</body>
+</html>

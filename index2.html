@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Counter</title>
+</head>
+<body>
+    <div id="myapp2">
+
+        <!-- <h1 @click="incrementCounter" >{{counter}}</h1> -->
+        <h1 v-on:click="hideMethod" v-if="flag">{{text}}</h1>
+
+        
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        console.log("Script started !!!!!!!!!")
+
+        const vueComponent2 = new Vue({
+            el:"#myapp2",
+            data:{
+                // counter:0,
+                text:"Hello World",
+                flag:true
+            },
+            methods:{
+                incrementCounter(){
+                    this.counter++
+                },
+                hideMethod(){
+                    if(this.flag==true){
+                        this.flag=false
+                    }
+                }
+            }
+
+        })
+
+        console.log("Script Ended !!!!!!!")
+    </script>
+    
+</body>
+</html>

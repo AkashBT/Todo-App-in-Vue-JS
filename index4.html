@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Vue 4 </title>
+</head>
+<body>
+    <h3>Title : Working with Multiple Checkboxes in Vue</h3>
+    <h3>Description : We will learnhow to bind a form having multiple checkboxes component using vue</h3>
+    
+    <form id="fruits">
+
+        <label for="apple">Apple</label>
+        <input type="checkbox" id="apple" value="apple" v-model="checkedfruits">
+
+        <label for="mango">Mango</label>
+        <input type="checkbox" id="mango" value="mango" v-model="checkedfruits">
+
+        <label for="pineapple">Pineapple</label>
+        <input type="checkbox" id="pineapple" value="pineapple" v-model="checkedfruits">
+
+        <br>
+
+        <h1>{{checkedfruits}}</h1>
+
+    </form>
+    
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <script>
+        const VueComponent = new Vue({
+            el:"#fruits",
+            data:{
+                checkedfruits:[]
+            },
+            methods:{
+
+            }
+        })
+        console.log(VueComponent)
+    </script>
+
+</body>
+</html>

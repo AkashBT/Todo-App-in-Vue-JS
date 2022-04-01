@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Vue3</title>
+</head>
+<body>
+    <div id="myapp2">
+
+       <div id="myapp3">
+        <h1>{{text}}</h1>
+            <h3>Input Tag</h3>
+            <input type="text" placeholder="Enter Something ......" v-model="mymessage">
+            <h1>{{mymessage}}</h1>
+
+            <hr>
+            <h3>Checkbox </h3>
+            <input type="checkbox" v-model="myflag">
+            <h1>{{myflag}}</h1>
+
+            <Textarea v-model="textareamsg"></Textarea>
+            <h1>{{textareamsg}}</h1>
+       </div>
+
+        
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- For input text -->
+    <!-- <script>
+        console.log("Script started !!!!!!!!!")
+
+        const vc3 = new Vue({
+            el:"#myapp3",
+            data:{
+                text:"Hello",
+                mymessage:""
+            },
+            methods:{
+                incrementCounter(){
+                    this.counter++
+                },
+                hideMethod(){
+                    if(this.flag==true){
+                        this.flag=false
+                    }
+                }
+            }
+
+        })
+
+        console.log("Script Ended !!!!!!!")
+    </script> -->
+
+
+    <!-- For Checkbox -->
+    <script>
+        console.log("Script started !!!!!!!!!")
+
+        const vc3 = new Vue({
+            el:"#myapp3",
+            data:{
+                myflag:false,
+                textareamsg:""
+            },
+            methods:{
+                incrementCounter(){
+                    this.counter++
+                },
+                hideMethod(){
+                    if(this.flag==true){
+                        this.flag=false
+                    }
+                }
+            }
+
+        })
+
+        console.log("Script Ended !!!!!!!")
+    </script>
+    
+</body>
+</html>

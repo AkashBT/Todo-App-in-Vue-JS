@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Vue Tutorial Number 6</title>
+</head>
+<body>
+     <h3>Title: Working with select and multiple select in Vue</h3>
+     <h3>Description : We wil learn how to bind a form having select and Multiple Select component using Vue</h3>
+
+
+     <form action="" id="games">
+
+        <select name="" id="" v-model="mychoice" multiple>
+            <option value="Football">Football</option>
+            <option value="Cricket">Cricket</option>
+            <option value="Tennis">Tennis</option>
+        </select>
+        <h1>To select multiple select hold control key on keyboard</h1>
+        <h1>{{mychoice}}</h1>
+        <!-- <button class="'btn btn-danger" v-on:click="cleardata">Clear Data</button> -->
+        <button class="'btn btn-danger" @click="cleardata">Clear Data</button>
+
+     </form>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+     <script>
+         const vueComponent =new Vue({
+             el:"#games",
+             data:{
+                mychoice :[]
+             },
+             methods:{
+                cleardata(){
+                    console.log("Clear Data")
+                    this.mychoice = []
+                }
+             }
+         })
+     </script>
+
+    
+</body>
+</html>
